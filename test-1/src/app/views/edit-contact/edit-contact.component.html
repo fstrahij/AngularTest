@@ -1,0 +1,42 @@
+<ng-container *ngIf="isLoading; else loadingFinish">
+    <div class="mat-spinner-container">
+        <mat-spinner class="mat-spinner" mode="indeterminate"></mat-spinner>        
+    </div>
+</ng-container>
+
+<ng-template #loadingFinish>
+    <form [formGroup]="contactForm"> 
+
+        <mat-form-field appearance="fill">
+            <mat-label>First name</mat-label>
+            <input matInput formControlName="firstName"/>
+            <mat-error *ngIf="!contactForm.get('firstName')?.valid">Mandatory field</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Last name</mat-label>
+            <input matInput formControlName="lastName" />
+            <mat-error *ngIf="!contactForm.get('lastName')?.valid">Mandatory field</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="emailAddress" />
+            <mat-error *ngIf="!contactForm.get('emailAddress')?.valid">Not valid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Address</mat-label>
+            <textarea matInput formControlName="address" cdkTextareaAutosize></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Phone number</mat-label>
+            <input matInput formControlName="phoneNumber" />
+            <mat-error *ngIf="!contactForm.get('phoneNumber')?.valid">Only valid input numbers 0-9, + and space characters</mat-error>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button color="primary" (click)="save()">SAVE</button>
+    <button mat-raised-button (click)="cancelClick()" >CANCEL</button>
+</ng-template>
