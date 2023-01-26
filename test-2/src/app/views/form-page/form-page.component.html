@@ -1,0 +1,49 @@
+<div class="container">	
+	<form [formGroup]="userForm" class="user-form">
+		<div class="row">
+			<input type="text" name="firstName" placeholder="First Name" formControlName="firstName">
+			<div *ngIf="userForm.get('firstName').touched && userForm.get('firstName').invalid" class="error-msg">First Name is required</div>			
+		</div>
+
+		<div class="row">
+			<input type="text" name="lastName"  placeholder="Last Name" formControlName="lastName">	
+			<div *ngIf="userForm.get('lastName').touched && userForm.get('lastName').invalid" class="error-msg">Last Name is required</div>			
+		</div>
+
+		<div class="row">
+			<input type="text" name="email" placeholder="Email" formControlName="email">	
+			<div *ngIf="userForm.get('email').touched && userForm.get('email').invalid" class="error-msg">Email is required</div>			
+		</div>
+
+		<div class="row">			
+			<select name="hobby" formControlName="hobby">
+				<option *ngFor="let hobby of hobbies" [ngValue]="hobby">{{ hobby }}</option>
+			</select>
+			<div *ngIf="userForm.get('hobby').touched && userForm.get('hobby').invalid" class="error-msg">Hobby is required</div>	
+		</div>
+
+		<div class="row">
+			<button class="btn" (click)="reset()">Reset</button>
+			<button class="btn" (click)="setView()">View</button>
+		</div>
+	</form>
+
+	<hr>
+
+	<div  class="data-view">
+		<div class="row">
+			<div class="result-header">Result</div>
+			<div class="result-body">
+				<ng-container *ngIf="user">					
+					<div>{{user?.firstName}} {{user?.lastName}},</div>
+					<div>{{user?.email}},</div>
+					<div>{{user?.hobby}}</div>
+				</ng-container>
+			</div>
+			<div class="result-footer">				
+				<button class="btn btn-left" (click)="remove()">Remove</button>
+				<button class="btn btn-right" (click)="save()">Save</button>
+			</div>
+		</div>
+	</div>
+</div>

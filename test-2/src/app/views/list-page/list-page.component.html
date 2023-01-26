@@ -1,0 +1,9 @@
+<div class="container">
+	<div class="row">		
+		<ul>
+			<li *ngFor="let user of users; let i = index">
+				{{i + 1}}. {{user.firstName}} {{user.lastName}} {{user.email}} {{user.hobby}} 
+			</li>
+		</ul>
+	</div>
+</div>

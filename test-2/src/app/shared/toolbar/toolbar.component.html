@@ -1,0 +1,4 @@
+<nav class="nav-container">
+	<a [ngClass]="{'active': isFormPageActive}" (click)="switchPage(1)" routerLink="form-page">Form Page</a>
+	<a [ngClass]="{'active': isListPageActive}" (click)="switchPage(2)"  routerLink="list-page">List Page</a>
+</nav>

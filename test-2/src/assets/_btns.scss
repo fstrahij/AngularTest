@@ -1,0 +1,23 @@
+.btn{	
+	width: 130px;
+	height: 40px;
+	border-radius: 5px;
+	background: white;
+	border: 2px solid #ddd;
+
+
+	&-left{
+		float:left;
+	}
+
+	&-right{
+		float: right;
+	}
+
+	&:hover{
+		background: #ddd;
+		color: white;
+		border-color: #ddd;
+		cursor: pointer;
+	};
+}

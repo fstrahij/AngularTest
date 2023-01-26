@@ -1,0 +1,17 @@
+@import './src/assets/_variables';
+@import './src/assets/_btns';
+
+html, body{
+	margin: 0;
+	height: 100%;
+	font-family: $default-font-family;
+	background-image: linear-gradient( $light-blue, $light-green );
+}
+
+.container{
+	margin: 0px;
+}
+
+.row{
+	margin: 30px 50px;
+}

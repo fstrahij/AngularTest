@@ -1,0 +1,53 @@
+.user-form{
+	display: block;
+
+	.row{
+		text-align: center;
+
+		input,
+		select{
+			width: 100%;
+			box-sizing: border-box;;
+		}
+
+		input{
+			height: 31px;
+		}
+
+		button{
+			margin-right: 10px;
+		}
+
+		.error-msg{
+			text-align: left;
+			color: red;
+		}
+	}
+}
+
+.data-view{
+	.result-header{
+		text-align: left;
+	}
+
+	.result-body{
+		border: 1px solid;
+		height: 200px;
+		background: white;
+		padding: 10px;
+
+		div{
+			margin: 5px 0px;
+		}
+	}
+
+	.result-footer{
+		margin-top: 20px;
+	}
+
+	.result-header,
+	.result-body{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
