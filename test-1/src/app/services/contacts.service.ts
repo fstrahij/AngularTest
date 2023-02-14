@@ -1,7 +1,3 @@
-/**
- *          NE MIJENJATI!!!
- */
-
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { concatMap, map, switchMap } from 'rxjs/operators';

@@ -1,12 +1,8 @@
-/**
- *          NE MIJENJATI!!!
- */
-
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { delay, map, tap } from 'rxjs/operators';
 
-const LOCAL_STORAGE_DATA_KEY = 'talentLyftInterviewA01Data';
+const LOCAL_STORAGE_DATA_KEY = 'test01Data';
 const MIN_DELAY_MS = 100;
 const MAX_DELAY_MS = 1500;
 const ERROR_CHANCE = 0.1;

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "talentlyft-interview-a01": {
+    "test01": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/talentlyft-interview-a01",
+            "outputPath": "dist/test01",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "talentlyft-interview-a01:build:production"
+              "browserTarget": "test01:build:production"
             },
             "development": {
-              "browserTarget": "talentlyft-interview-a01:build:development"
+              "browserTarget": "test01:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "talentlyft-interview-a01:build"
+            "browserTarget": "test01:build"
           }
         },
         "test": {
@@ -109,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "talentlyft-interview-a01"
+  "defaultProject": "test01"
 }

@@ -1,7 +1,3 @@
-/**
- *          NE MIJENJATI!!!
- */
-
 import { ContactModel } from '../models/contact.model';
 
 export const contactsData: ContactModel[] = [

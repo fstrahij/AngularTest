@@ -1,7 +1,3 @@
-/**
- *          NE MIJENJATI!!!
- */
-
 export interface ContactModel {
     id: number;
     firstName: string;
